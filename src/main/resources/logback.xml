@@ -1,0 +1,15 @@
+<configuration>
+    <appender name="Console" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <Pattern>%black(%d{ISO8601}) %highlight(%-5level) [%blue(%t)] %yellow(%C{1.}): %msg%n%throwable</Pattern>
+        </encoder>
+    </appender>
+
+    <root level="warn">
+        <appender-ref ref="Console" />
+    </root>
+
+    <logger name="org.aigu.bankera" level="trace" additivity="false">
+        <appender-ref ref="Console"/>
+    </logger>
+</configuration>
